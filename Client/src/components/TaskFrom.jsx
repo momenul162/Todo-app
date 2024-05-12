@@ -1,5 +1,5 @@
-import { useStoreActions, useStoreState } from "easy-peasy";
-import React, { useEffect } from "react";
+import { useStoreActions } from "easy-peasy";
+import React from "react";
 
 const TaskFrom = () => {
   const { postTasks } = useStoreActions((actions) => actions.tasks);
@@ -52,9 +52,7 @@ const TaskFrom = () => {
                 <span className="label-text">State</span>
               </label>
               <select name="state" className="select select-bordered w-full bg-white">
-                <option disabled defaultValue="">
-                  Select one
-                </option>
+                <option disabled>Select one</option>
                 <option value="Todo">Todo</option>
                 <option value="In-Progress">In-Progress</option>
                 <option value="Done">Done</option>

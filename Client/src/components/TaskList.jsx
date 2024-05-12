@@ -1,4 +1,4 @@
-import { action, useStoreActions } from "easy-peasy";
+import { useStoreActions } from "easy-peasy";
 import React from "react";
 
 const TaskList = ({ tasks }) => {

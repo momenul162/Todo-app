@@ -7,9 +7,6 @@ export const taskModel = {
   setTasks: action((state, payload) => {
     state.tasks = payload;
   }),
-  addTasks: action((state, payload) => {
-    state.tasks.push(payload);
-  }),
 
   fetchTasks: thunk(async (actions) => {
     try {
@@ -36,7 +33,9 @@ export const taskModel = {
     try {
       const res = await axios.post("http://localhost:5000/tasks", payload);
 
-      actions.addTasks(res.data);
+      if (res.data) {
+        actions.fetchTasks();
+      }
     } catch (error) {
       console.error("Error posting task", error);
     }
