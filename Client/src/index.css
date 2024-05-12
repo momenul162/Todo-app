@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: white;
+  color: black;
+  font-family: "Gill Sans Extrabold", sans-serif;
+}
